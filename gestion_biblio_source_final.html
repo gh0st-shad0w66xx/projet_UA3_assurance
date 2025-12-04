@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>Biblio Manager Pro</title>
-
-    <!-- CSS externe -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- JS externe -->
-    <script src="app.js" defer></script>
 </head>
-<body>
 
+<body>
     <div class="wrapper">
         <h1>📚 BIBLIO MANAGER PRO</h1>
 
-        <div class="header-container">
+        <div class="top-panel">
+            <input type="text" id="title" placeholder="Titre..." />
+            <input type="text" id="author" placeholder="Auteur..." />
 
-            <!-- Sélecteur de type -->
-            <label for="book-type">Type :</label>
-            <select id="book-type">
+            <select id="category">
                 <option value="1">Science-Fiction</option>
                 <option value="2">Documentaire</option>
                 <option value="3">Roman</option>
             </select>
 
-            <!-- Bouton d'enregistrement -->
-            <button id="save-btn">Enregistrer</button>
+            <input type="text" id="isbn" placeholder="ISBN">
+            <button id="btnAdd" class="btn-add">ENREGISTRER</button>
 
-            <!-- Recherche -->
-            <label for="search">Recherche :</label>
-            <input type="text" id="search" placeholder="Rechercher un livre...">
+            <br><br>
 
+            Recherche :
+            <input type="text" id="search" class="search" placeholder="Rechercher...">
         </div>
 
-        <h3>
-            Inventaire (<span id="counter">0</span>)
-        </h3>
+        <p id="message"></p>
+
+        <h3>Inventaire (<span id="count">0</span>)</h3>
 
         <table>
             <thead>
@@ -46,19 +40,16 @@
                     <th>Info Livre</th>
                     <th>Type</th>
                     <th>Détails</th>
-                    <th>Actions</th>
+                    <th>Opt</th>
                 </tr>
             </thead>
-            <tbody id="book-list">
-            </tbody>
+            <tbody id="tableBody"></tbody>
         </table>
 
         <br>
-
-        <!-- Bouton RESET -->
-        <button id="reset-btn" class="danger">⚠️ RAZ</button>
-
+        <button id="btnReset" class="btn-reset">⚠️ RAZ</button>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>
