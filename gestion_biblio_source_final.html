@@ -1,67 +1,64 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblio Manager Pro</title>
 
+    <!-- CSS externe -->
+    <link rel="stylesheet" href="style.css">
 
+    <!-- JS externe -->
+    <script src="app.js" defer></script>
+</head>
+<body>
 
+    <div class="wrapper">
+        <h1>📚 BIBLIO MANAGER PRO</h1>
 
+        <div class="header-container">
 
+            <!-- Sélecteur de type -->
+            <label for="book-type">Type :</label>
+            <select id="book-type">
+                <option value="1">Science-Fiction</option>
+                <option value="2">Documentaire</option>
+                <option value="3">Roman</option>
+            </select>
 
+            <!-- Bouton d'enregistrement -->
+            <button id="save-btn">Enregistrer</button>
 
-<div class="wrapper">
-<h1>&#128218; BIBLIO MANAGER PRO</h1>
-<div style="background: #222;padding: 15px;">
+            <!-- Recherche -->
+            <label for="search">Recherche :</label>
+            <input type="text" id="search" placeholder="Rechercher un livre...">
 
+        </div>
 
+        <h3>
+            Inventaire (<span id="counter">0</span>)
+        </h3>
 
-<option value="1">Science-Fiction</option>
-<option value="2">Documentaire</option>
-<option value="3">Roman</option>
+        <table>
+            <thead>
+                <tr>
+                    <th>Num</th>
+                    <th>Info Livre</th>
+                    <th>Type</th>
+                    <th>Détails</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+            </tbody>
+        </table>
 
+        <br>
 
-ENREGISTRER
-<br/><br/>
-Recherche : 
-</div>
-<p></p>
-<h3>Inventaire (<span>0</span>)</h3>
-<table>
-<thead>
-<tr>
-<th>Num</th>
-<th>Info Livre</th>
-<th>Type</th>
-<th>D&#233;tails</th>
-<th>Opt</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<br/>
-⚠️ RAZ
-</div>
+        <!-- Bouton RESET -->
+        <button id="reset-btn" class="danger">⚠️ RAZ</button>
 
+    </div>
 
-<script type="module" src="https://s.brightspace.com/lib/bsi/2025.11.295/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-						if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-								elm.setAttribute('style', 'display: block; height: 0.5rem;');
-							});
-
-							document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
-								const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
-								elm.replaceWith(mrow);
-							});
-
-							window.D2L.MathJax.loadMathJax({
-								outputScale: 1.5,
-								renderLatex: false,
-								enableMML3Support: false
-							});
-						}
-					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.11.295/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2025.11.295/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+</body>
+</html>
